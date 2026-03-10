@@ -7,8 +7,10 @@ public class ArrayListDocs {
 	
 	public static void main(String[] args) {
 		
+		final String m = "Pablo";
+		
 		ArrayList<String> prueba = new ArrayList<>();
-		ArrayList<String> prueba2 = new ArrayList<>(Arrays.asList("Jhon", "Jerry", "Mike"));
+		ArrayList<String> prueba2 = new ArrayList<>(Arrays.asList("Jhon", "Jerry", "Mike", m));
 		
 		
 		//Get elements:
@@ -35,6 +37,10 @@ public class ArrayListDocs {
 		System.out.println(prueba2.get(1));
 		
 		//Print ArrayList
+		
+		System.out.println(prueba2);
+		
+		prueba2.set(1, "Carlos");
 		
 		System.out.println(prueba2);
 		
