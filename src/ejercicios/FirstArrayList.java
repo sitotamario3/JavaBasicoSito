@@ -1,27 +1,22 @@
 package ejercicios;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class FirstArrayList {
 
 	public static void main(String[] args) {
 		
-		ArrayList<String> alumnos = new ArrayList<>();
-		alumnos.add("Sito");
-		alumnos.add("Pablo");
-		alumnos.add("María");
-		alumnos.add("James");
-		alumnos.add("Paula");
-		alumnos.add("Maddalena");
-	
-		for (int i = 0; i < alumnos.size(); i++) {
-			
-			System.out.println(alumnos.get(i));
-			
+		ArrayList<String> nombres = new ArrayList<>(Arrays.asList("Pablo", "Sito", "Maria", "Juan Carlos", "Roberto"));
+		
+		for (int i = 0; i < nombres.size(); i++) {
+			System.out.println(nombres.get(i));			
 		}
 		
-		for (String alumno : alumnos) {
-			System.out.println(alumno);
+		System.out.println();
+		
+		for (String nombre : nombres) {
+			System.out.println(nombre);
 		}
 
 	}
