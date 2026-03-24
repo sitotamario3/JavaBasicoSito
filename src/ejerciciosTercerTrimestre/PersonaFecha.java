@@ -57,8 +57,12 @@ public class PersonaFecha {
 		return "Nombre: " + nombre + "\n" + "Edad: " + getEdad() + "\n" + "Días vividos: " + getDiasVividos();
 	}
 	
-	public void esMayor() {
+	public boolean esMayor(PersonaFecha pf) {
 		
+		if (this.fechaNacimiento.isBefore(pf.fechaNacimiento)) {
+			
+		}
+		 
 	}
 
 }
