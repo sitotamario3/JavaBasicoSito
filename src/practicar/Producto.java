@@ -1,4 +1,4 @@
-package Practicar;
+package practicar;
 
 public class Producto {
 	
@@ -38,6 +38,8 @@ public class Producto {
 		producto1.mostrarInformacion();
 		producto1.vender(50);;
 		producto1.reabastecer(10);
+		producto1.vender(30);
+		producto1.vender(5);
 	}
 
 }
