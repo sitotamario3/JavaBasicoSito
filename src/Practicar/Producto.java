@@ -17,21 +17,27 @@ public class Producto {
 	}
 	
 	
-	// Hay que corregir esto de aqui, pues no puede ser int, ya que debe poder salir el mensaje de error si no hay suficiente.
-	public int vender(int cantidad) {
-		if (cantidadEnStock > cantidad) {
+	// Hay que corregir esto de aqui, pues no puede ser int, ya que debe poder salir el mensaje de error si no hay suficiente. Corregido
+	public void vender(int cantidad) {
+		if (cantidadEnStock >= cantidad) {
 			cantidadEnStock = cantidadEnStock - cantidad;
+			System.out.println("Se han vendido " + cantidad + " " + nombre + ", quedan " + cantidadEnStock + " unidades en stock");
 		} else {
 			System.out.println("Error, no hay stock suficiente");
-		}
-		return cantidadEnStock;
+		}		
+	}
+	
+	public void reabastecer(int cantidad) {
+		cantidadEnStock += cantidad;
+		System.out.println("Se han añadido " + cantidad + " unidades de " + nombre + "  al stock. Stock total: " + cantidadEnStock);
 	}
 	
 	public static void main (String[] args) {
 		Producto producto1 = new Producto("Champu", 1.5, 50);
 		
 		producto1.mostrarInformacion();
-		System.out.println("stock: " + producto1.vender(55));
+		producto1.vender(50);;
+		producto1.reabastecer(10);
 	}
 
 }
