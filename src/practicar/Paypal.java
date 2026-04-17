@@ -11,7 +11,7 @@ public class Paypal extends MetodoPago{
 	
 	@Override // Metodo proceso pago para Paypal
 	public void procesarPago(double monto) {
-		System.out.println("Se ha procesado el pago en Paypal desde la cuenta :" + email );
+		System.out.println("Se ha procesado el pago en Paypal desde la cuenta: " + email );
 	}
 
 }
